@@ -15,7 +15,7 @@
   </head>
   <body id="theme-color" class="bg-white">
     <section class="w-full p-6">
-      <header class="bg-[FFFFFF] rounded-lg shadow-xl opacity-1">
+      <header class="bg-gray-300 rounded-lg shadow-xl opacity-1">
         <nav class="flex justify-between items-center justify-items-center p-3">
           <div class="flex items-center gap-4">
             <img class="w-10" src="./assets/logo.png" alt="" />
@@ -94,13 +94,15 @@
             <!-- six card container -->
             <div class="grid grid-cols-3 grid-rows-2 mt-[44px] gap-6">
               <!-- card1 -->
-              <div class="bg-slate-300 p-3 rounded-lg">
+              <div class="bg-slate-300 p-3 rounded-lg parent">
                 <div class="bg-white w-[90px] p-2 rounded-md shadow-sm mb-2">
                   <p>ShopEase</p>
                 </div>
-                <h2 class="text-2xl mb-4">Fix Mobile Button Issue</h2>
+                <h2 class="text-2xl mb-4" id="title">
+                  Fix Mobile Button Issue
+                </h2>
                 <div class="bg-slate-50 p-4 rounded-md mb-2">
-                  <p id="title">
+                  <p>
                     Debug using Chrome DevTools, check for overlapping
                     elements...
                   </p>
@@ -118,15 +120,13 @@
                 </div>
               </div>
               <!-- card2 -->
-              <div class="bg-slate-300 p-3 rounded-lg">
+              <div class="bg-slate-300 p-3 rounded-lg parent">
                 <div class="bg-white w-[90px] p-2 rounded-md shadow-sm mb-2">
                   <p>CloudSync</p>
                 </div>
-                <h2 class="text-2xl mb-4">Add Dark Mode</h2>
+                <h2 class="text-2xl mb-4" id="title">Add Dark Mode</h2>
                 <div class="bg-slate-50 p-4 rounded-md mb-2">
-                  <p id="title">
-                    Store the user's preference in localStorage...
-                  </p>
+                  <p>Store the user's preference in localStorage...</p>
                 </div>
                 <div
                   class="flex gap-2 items-center justify-between justify-items-center"
@@ -144,13 +144,13 @@
               </div>
 
               <!-- card-3 -->
-              <div class="bg-slate-300 p-3 rounded-lg">
+              <div class="bg-slate-300 p-3 rounded-lg parent">
                 <div class="bg-white w-[90px] p-2 rounded-md shadow-sm mb-2">
                   <p>SwiftPay</p>
                 </div>
-                <h2 class="text-2xl mb-4">Optimize Home page </h2>
+                <h2 class="text-2xl mb-4" id="title">Optimize Home page </h2>
                 <div class="bg-slate-50 p-4 rounded-md mb-2">
-                  <p id="title">
+                  <p>
                     Debug using Chrome DevTools, check for overlapping
                     elements...
                   </p>
@@ -168,13 +168,13 @@
                 </div>
               </div>
               <!-- card 4 -->
-              <div class="bg-slate-300 p-3 rounded-lg">
+              <div class="bg-slate-300 p-3 rounded-lg parent">
                 <div class="bg-white w-[90px] p-2 rounded-md shadow-sm mb-2">
                   <p>Meta</p>
                 </div>
-                <h2 class="text-2xl mb-4">Add new emoji 🤲</h2>
+                <h2 class="text-2xl mb-4" id="title">Add new emoji 🤲</h2>
                 <div class="bg-slate-50 p-4 rounded-md mb-2">
-                  <p id="title">
+                  <p>
                     Debug using Chrome DevTools, check for overlapping
                     elements...
                   </p>
@@ -192,13 +192,13 @@
                 </div>
               </div>
               <!-- card-5 -->
-              <div class="bg-slate-300 p-3 rounded-lg">
+              <div class="bg-slate-300 p-3 rounded-lg parent">
                 <div class="bg-white w-[100px] p-2 rounded-md shadow-sm mb-2">
                   <p>Google LLC</p>
                 </div>
-                <h2 class="text-2xl mb-4">Integrate OpenAI API</h2>
+                <h2 class="text-2xl mb-4" id="title">Integrate OpenAI API</h2>
                 <div class="bg-slate-50 p-4 rounded-md mb-2">
-                  <p id="title">
+                  <p>
                     Debug using Chrome DevTools, check for overlapping
                     elements...
                   </p>
@@ -216,13 +216,13 @@
                 </div>
               </div>
               <!-- card-6 -->
-              <div class="bg-slate-300 p-3 rounded-lg">
+              <div class="bg-slate-300 p-3 rounded-lg parent">
                 <div class="bg-white w-[90px] p-2 rounded-md shadow-sm mb-2">
                   <p>Glassdoar</p>
                 </div>
-                <h2 class="text-2xl mb-4">Improve Job searching</h2>
+                <h2 class="text-2xl mb-4" id="title">Improve Job searching</h2>
                 <div class="bg-slate-50 p-4 rounded-md mb-2">
-                  <p id="title">
+                  <p>
                     Debug using Chrome DevTools, check for overlapping
                     elements...
                   </p>
@@ -258,7 +258,7 @@
             </div>
             <!-- <div class="p-4" id="historyDiv">
               <div class="bg-white w-[400] p-3 rounded-md shadow-sm">
-                <p>You have complete this task</p>
+                <p id="text">You have complete the task</span></p>
               </div>
             </div> -->
           </div>

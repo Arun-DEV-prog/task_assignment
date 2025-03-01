@@ -2,6 +2,9 @@
 const themeBtn = document.getElementById('theme-btn');
 const themeColor = document.querySelector('.bg-white');
 
+
+
+
 const Colors = [
     'bg-orange-400',
     'bg-yellow-50',
@@ -33,7 +36,7 @@ function changColor() {
 // Button
 
 const BtnComplete = document.querySelectorAll('.btn');
-
+let index=0;
 for (let btn of BtnComplete) {
     btn.addEventListener('click', (event) => {
         event.preventDefault();
@@ -47,18 +50,25 @@ for (let btn of BtnComplete) {
         document.getElementById('header-task').innerText=sum;
         document.getElementById('taskCompelete').innerText = sub;
 
-      const main_histoyDiv=document.getElementById('main_histoyDiv')
-       const title=document.querySelectorAll('#title').innerText;
-       
-        const historyDiv=  document.createElement('div');
-        historyDiv.classList.add('p-1');
-        historyDiv.innerHTML=`
-        <div class="bg-white w-[400] p-3 rounded-md shadow-sm">
-                <p>You have complete the task ${title}</p>
-        </div>
-        
-        `
-        main_histoyDiv.appendChild(historyDiv);
+      
+     
+      
+      const cardTitle=document.querySelectorAll('#title');
+      const main_histoyDiv=document.getElementById('main_histoyDiv');
+         if(index<cardTitle.length){
+             const titleText=cardTitle[index].textContent;
+             const historyDiv=document.createElement('div');
+             historyDiv.innerHTML=`
+             <div class="p-4" >
+              <div class="bg-white w-[400] p-3 rounded-md shadow-sm">
+                <p id="text">You have complete the task ${titleText}</span></p>
+              </div>
+            </div>
+             `
+              
+             main_histoyDiv.appendChild(historyDiv);
+             index++;
+         }
         
 
         btn.setAttribute('disabled', true);
@@ -89,3 +99,12 @@ function convertNumber(id) {
     const convertNumber = parseInt(convertId);
     return convertNumber;
 }
+
+// function dynamicgetTitle(id){
+//      const titles=document.getElementById(id).innerText;
+//       return titles;
+// }
+
+
+
+
