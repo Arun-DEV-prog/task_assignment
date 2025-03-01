@@ -3,6 +3,9 @@ const themeBtn = document.getElementById('theme-btn');
 const themeColor = document.querySelector('.bg-white');
 
 
+// const history=document.querySelector('.history');
+
+// history.classList.remove('hidden');    
 
 
 const Colors = [
@@ -34,9 +37,9 @@ function changColor() {
 
 
 // Button
-
-const BtnComplete = document.querySelectorAll('.btn');
 let index=0;
+const BtnComplete = document.querySelectorAll('.btn');
+
 for (let btn of BtnComplete) {
     btn.addEventListener('click', (event) => {
         event.preventDefault();
@@ -52,23 +55,44 @@ for (let btn of BtnComplete) {
 
       
      
-      
+    
       const cardTitle=document.querySelectorAll('#title');
       const main_histoyDiv=document.getElementById('main_histoyDiv');
+    
+     
+const clearBtn=document.getElementById("clearBtn");
+clearBtn.addEventListener('click',(event)=>{
+    // 
+    event.preventDefault();
+    const gaybulHawa=document.querySelectorAll('.gaybulHawa');
+      for(let gay of gaybulHawa){
+         gay.classList.add('hidden');
+      }
+  
+})
+
+
+
          if(index<cardTitle.length){
              const titleText=cardTitle[index].textContent;
              const historyDiv=document.createElement('div');
+                   historyDiv.className='gaybulHawa';
+
+            
+                    
              historyDiv.innerHTML=`
-             <div class="p-4" >
+             <div class="p-1" id="hty" >
               <div class="bg-white w-[400] p-3 rounded-md shadow-sm">
-                <p id="text">You have complete the task ${titleText}</span></p>
+                <p id="text">You have complete the task ${titleText}at ${ampm(new Date)}</span></p>
               </div>
             </div>
              `
-              
+             
              main_histoyDiv.appendChild(historyDiv);
              index++;
          }
+
+      
         
 
         btn.setAttribute('disabled', true);
@@ -78,6 +102,10 @@ for (let btn of BtnComplete) {
 
     })
 }
+
+
+
+
 
 // 
 const months = ["January","February","March","April","May","June","July","August","September","October","November","December"];
@@ -92,6 +120,9 @@ document.getElementById('date').innerText=d.getDate();
 document.getElementById('year').innerText=d.getFullYear();
 
 
+
+
+
 // function converted parseInt
 
 function convertNumber(id) {
@@ -99,6 +130,21 @@ function convertNumber(id) {
     const convertNumber = parseInt(convertId);
     return convertNumber;
 }
+
+function ampm(date) {
+    var hours = date.getHours();
+    var minutes = date.getMinutes();
+    var ampm = hours >= 12 ? 'pm' : 'am';
+    hours = hours % 12;
+    hours = hours ? hours : 12; // the hour '0' should be '12'
+    minutes = minutes < 10 ? '0'+minutes : minutes;
+    var strTime = hours + ':' + minutes + ' ' + ampm;
+    return strTime;
+  }
+  
+  
+
+
 
 // function dynamicgetTitle(id){
 //      const titles=document.getElementById(id).innerText;
