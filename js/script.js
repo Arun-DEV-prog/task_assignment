@@ -143,6 +143,11 @@ function ampm(date) {
   }
   
   
+   const discoverDiv=document.getElementById('discoverDiv');
+   discoverDiv.addEventListener('click',(event)=>{
+     event.preventDefault();
+       window.location.href='blog.html';
+   })
 
 
 

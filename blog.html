@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blog</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.12.24/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <section class="w-full p-6">
+      <header class="bg-gray-300 rounded-lg shadow-xl opacity-1">
+        <nav class="flex justify-between items-center justify-items-center p-3">
+          <div class="flex items-center gap-4">
+            <img class="w-10" src="./assets/logo.png" alt="" />
+            <h2 class="text-3xl">DevBoard</h2>
+          </div>
+          <div>
+            <p class="text-blue-500">
+              ................................................................................................................................
+            </p>
+          </div>
+          <div class="flex items-center gap-4">
+            <button class="btn bg-blue-400 text-xl" id="bckBtn">
+              Back To Home
+            </button>
+          </div>
+        </nav>
+      </header>
+    </section>
+    <main class="w-full p-6">
+      <section>
+        <h2 class="text-center text-4xl pb-2">Blog</h2>
+        <!-- Question div -->
+        <div class="bg-slate-200 rounded-md shadow-sm p-2 mb-5">
+          <h2 class="text-xl font-bold mb-4 p-2 border-b-2 border-blue-400">
+            Question-1: What are the different ways to select an element in the
+            DOM?
+          </h2>
+          <p class="p-2 text-md">
+            There are some ways select element using DOM . 1.
+            getElementsByTagName() 2. getElementById()
+            3.getElementsByClassName() 4.quarySelector() and
+            5.quarySelectorAll()
+          </p>
+        </div>
+        <div class="bg-slate-200 rounded-md shadow-sm p-2 mb-5">
+          <h2 class="text-xl font-bold mb-4 p-2 border-b-2 border-blue-400">
+            Question-2: What is the difference between innerHTML, innerText, and
+            textContent ?
+          </h2>
+          <p class="p-2 text-md">
+            TextContents is all text contained by an element and all its
+            children that are for formatting purposes only. InnerText returns
+            all text contained by an element and all its child elements.
+            InnerHtml returns all text, including html tags, that is contained
+            by an element.
+          </p>
+        </div>
+        <div class="bg-slate-200 rounded-md shadow-sm p-2 mb-5">
+          <h2 class="text-xl font-bold mb-4 p-2 border-b-2 border-blue-400">
+            Question-3: What is event delegation in the DOM?
+          </h2>
+          <p class="p-2 text-md">
+            In the DOM, "event delegation" is a JavaScript technique where you
+            attach a single event listener to a parent element, allowing it to
+            handle events triggered on any of its child elements
+          </p>
+        </div>
+        <div class="bg-slate-200 rounded-md shadow-sm p-2 mb-5">
+          <h2 class="text-xl font-bold mb-4 p-2 border-b-2 border-blue-400">
+            Question-4: What is event bubbling in the DOM?
+          </h2>
+          <p class="p-2 text-md">
+            Event bubbling can be defined as a phase of Event propagation in
+            which if an event occurs on a particular element will propagate or
+            bubble up to the ancestor or the parent elements in the DOM
+            hierarchy.
+          </p>
+        </div>
+        <div class="bg-slate-200 rounded-md shadow-sm p-2 mb-5">
+          <h2 class="text-xl font-bold mb-4 p-2 border-b-2 border-blue-400">
+            Question-5: How do you create, add, and remove elements using
+            JavaScript?
+          </h2>
+          <p class="p-2 text-md">
+            Using document.createElementv("any html tag") we create HTML tag,
+            add classList in HTML tag we use document.classList.add("any class
+            name") and remove any classList from HTMl we using
+            document.classList.remove('class-Name').
+          </p>
+        </div>
+      </section>
+    </main>
+    <script src="./js/blog.js"></script>
+  </body>
+</html>
